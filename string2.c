@@ -5,19 +5,18 @@
 
 int instancia=0;
 int flag=0;
-char charassinatura[1000001],charpalavra[300001];
 int tamP,tamA,i,j;
-//char** assinatura,palavra;
 
 int main (){
   instancia++;
-  //printf("Instancia %d\n",instancia);
-  scanf("%s", &charassinatura);
+  char *assinatura, *palavra;
 
-  while(charassinatura!='0'){
-    scanf("%s", &charpalavra);
-    tamP = strlen(charpalavra);
-    tamA = strlen(charassinatura);
+  scanf("%s", &assinatura);
+
+  while(assinatura!='0'){
+    scanf("%s", &palavra);
+    tamP = strlen(palavra);
+    tamA = strlen(assinatura);
     char *assinatura = (char*)calloc(tamA, sizeof(char));
     char *palavra = (char*)calloc(tamP, sizeof(char));
     j=0;
@@ -40,14 +39,11 @@ int main (){
   printf("Instancia %d\n",instancia);
   printf("falsa\n\n");
 }
-  puts(assinatura);
   free(assinatura);
   free(palavra);
-  scanf("%s", charassinatura);
+  scanf("%s", assinatura);
 
   }
 
   return 0;
 }
-
-//printf("Estou aqui");
