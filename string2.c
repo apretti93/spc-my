@@ -11,7 +11,7 @@ int main (){
 
   assinatura = (char*)malloc(9*sizeof(char));
   while(scanf("%s", assinatura)){
-    if(assinatura=='\0') break;
+  if(assinatura[0]='0' && assinatura[1]==NULL) break;
 
   instancia++;
   palavra = (char*)calloc(300001,sizeof(char));
